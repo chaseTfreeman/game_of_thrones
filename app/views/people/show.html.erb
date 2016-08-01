@@ -1,0 +1,12 @@
+<% flash.each do |type, message| %>
+  <p><%= type %>: <%= message %></p>
+<% end %>
+
+<h2>
+  <%= @person.name %>
+  <%= link_to "(edit)", edit_person_path(@person) %>
+</h2>
+
+<h3>Name: <%= @person.name %></h3>
+
+House: <%= @person.house_id %></br>

@@ -1,0 +1,12 @@
+<h2>Persons</h2>
+<h3><%= link_to "New person", new_person_path %></h3>
+
+  <% @persons.each do |person| %>
+
+  <div class="person">
+
+    <img src="<%= person.img_url %>" class="person_profile"> | <%= link_to 'Delete', person_path(person),
+                                              method: :delete,
+                                              data: { confirm: 'Are you sure?' } %>
+  <div>
+  <% end %>
