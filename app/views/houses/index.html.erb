@@ -1,5 +1,10 @@
 <h2>Houses</h2>
 <h3><%= link_to "New House", new_house_path %></h3>
-<ul>
-  <%= render @houses %>
-</ul>
+<% @houses.each do |house| %>
+
+<div class="house_sigil">
+<%= link_to image_tag("#{house.img_url}"), house_path(house) %> </div>| <%= link_to 'Delete', house_path(house),
+                                            method: :delete,
+                                            data: { confirm: 'Are you sure?' } %>
+
+<% end %>

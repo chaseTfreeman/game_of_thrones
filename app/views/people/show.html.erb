@@ -2,9 +2,13 @@
   <p><%= type %>: <%= message %></p>
 <% end %>
 
+
+<div class="person">
+<img src="<%= @person.img_url %>">
+</div>
 <h2>
-  <%= @person.name %>
-  <%= link_to "(edit)", edit_person_path(@person) %>
+  <%= link_to "(edit)", edit_person_path(@person) %> |
+
 </h2>
 
 <h3>Name: <%= @person.name %></h3>

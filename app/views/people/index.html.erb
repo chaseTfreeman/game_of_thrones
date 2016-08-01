@@ -4,9 +4,8 @@
   <% @persons.each do |person| %>
 
   <div class="person">
-
-    <img src="<%= person.img_url %>" class="person_profile"> | <%= link_to 'Delete', person_path(person),
+<%= link_to image_tag("#{person.img_url}"), person_path(person) %> </div>| <%= link_to 'Delete', person_path(person),
                                               method: :delete,
                                               data: { confirm: 'Are you sure?' } %>
-  <div>
+
   <% end %>
