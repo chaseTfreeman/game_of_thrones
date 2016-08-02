@@ -1,4 +1,7 @@
 <h2>Edit <%= @person.name %></h2>
+<%= link_to 'Delete', person_path(person),
+                                              method: :delete,
+                                              data: { confirm: 'Are you sure?' } %>
 
 
 
