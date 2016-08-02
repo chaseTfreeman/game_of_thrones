@@ -2,17 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 div#houses {
-  z-index: -1;
+  margin-top: 20px;
+  z-index: 1;
 }
 
 #houses{
-  margin-top: 100px;
+  margin-top: 10px;
   margin: 0 auto;
-  z-index: -1;
+  z-index: 1;
 }
 .house-profile {
-  margin-top: 140px;
-
+  margin-top: 160px;
   width: 100%;
   display: inline-block;
   vertical-align: middle;
