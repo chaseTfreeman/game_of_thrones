@@ -8,4 +8,6 @@
 </h2>
 <h4><%= @house.motto %></h4>
 
-<img class='house-sigil' src="<%= @house.img_url %>">
+<div class="js-packery" data-packery-options='{ "itemSelector": ".item" }'>
+<img class="item" src="<%= @house.img_url %>">
+</div
