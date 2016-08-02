@@ -2,12 +2,20 @@
   <p><%= type %>: <%= message %></p>
 <% end %>
 
+<div class="house-profile">
 <h2>
   <%= @house.name %>
-  <%= link_to "(edit)", edit_house_path(@house) %>
-</h2>
-<h4><%= @house.motto %></h4>
-
-<div class="js-packery" data-packery-options='{ "itemSelector": ".item" }'>
-<img class="item" src="<%= @house.img_url %>">
-</div
+  <h2>
+  <h3><%= link_to "Edit", edit_house_path(@house) %>
+  <%= link_to "Delete", house_path(@house),
+                                        method: :delete,
+                                        data: { confirm: 'Are you sure?' } %></h3>
+<div class="houses">
+<img class="sigil" src="<%= @house.img_url %>">
+</div>
+</p>House Words:</p><h4><%= @house.motto %></h4>
+<p>Seat of Power:</p><h4><%= @house.seat %></h4>
+<div>
+<img src="<%= @house.seat_img %>">
+</div>
+</div>

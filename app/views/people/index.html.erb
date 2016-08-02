@@ -1,11 +1,10 @@
 <h2>Persons</h2>
 <h3><%= link_to "New person", new_person_path %></h3>
 
+<div id="people" class="transitions-enabled">
   <% @persons.each do |person| %>
-
-  <div class="person">
-<%= link_to image_tag("#{person.img_url}"), person_path(person) %> </div>| <%= link_to 'Delete', person_path(person),
-                                              method: :delete,
-                                              data: { confirm: 'Are you sure?' } %>
-
+  <div class="box">
+<%= link_to image_tag("#{person.img_url}"), person_path(person) %>
+</div>
   <% end %>
+</div>
