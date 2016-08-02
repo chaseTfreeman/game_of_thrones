@@ -1,9 +1,13 @@
+
+<div class="form">
 <%= form_for @person do |f| %>
+<h2>Create New Character</h2>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.label :house_id %>
-  <%= f.text_field :house_id %>
+
+
+  <%= f.select( :house_id, House.all.collect { |house| [house.name, house.id] } ) %>
 
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
@@ -11,3 +15,4 @@
 
   <%= f.submit %>
 <% end %>
+</div>

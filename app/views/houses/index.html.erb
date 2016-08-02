@@ -1,9 +1,9 @@
-<h2>Houses</h2>
-<h3><%= link_to "New House", new_house_path %></h3>
+
+<div class="whitespace"></div>
 <div id="houses" class="transitions-enabled">
   <% @houses.each do |house| %>
   <div class="box">
-    <%= link_to image_tag("#{house.img_url}"), house_path(house) %> 
+    <%= link_to image_tag("#{house.img_url}"), house_path(house) %>
   </div>
     <% end %>
 </div>

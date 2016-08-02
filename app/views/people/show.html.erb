@@ -2,18 +2,19 @@
   <p><%= type %>: <%= message %></p>
 <% end %>
 
-
-<div class="person">
-<img src="<%= @person.img_url %>">
-</div>
-<h2>
+<div class="whitespace"></div>
+<div class="person-profile">
+<h1>Name: <%= @person.name %></h1>
+<h3>
   <%= link_to "(edit)", edit_person_path(@person) %> |
   <%= link_to 'Delete', person_path(@person),
                                                 method: :delete,
                                                 data: { confirm: 'Are you sure?' } %>
+</h3>
+<hr>
+<img src="<%= @person.img_url %>">
 
-</h2>
 
-<h3>Name: <%= @person.name %></h3>
-
-House: <%= @person.house_id %></br>
+<h2>House: <%= @person.house_id %></h2>
+<h2>Biograhpy:</h2>
+</div>

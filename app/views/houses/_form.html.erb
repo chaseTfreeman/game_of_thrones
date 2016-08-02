@@ -1,3 +1,5 @@
+
+<div class="form">
 <% @house.errors.full_messages.each do |message| %>
 <p>
   <%= message %>
@@ -5,6 +7,7 @@
 <% end %>
 
 <%= form_for @house do |f| %>
+<h2>Create New House</h2>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -16,3 +19,4 @@
 
   <%= f.submit %>
 <% end %>
+</div>

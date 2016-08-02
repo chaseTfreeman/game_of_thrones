@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>GOT2</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>GOT2</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <header>
+    <h1>Game of Thrones</h1>
+<nav>
+  <ul>
+  <li><%= link_to "Houses", houses_path(@house) %> </li>
+  <li><%= link_to "Characters", people_path(@person) %></li>
+  <li><%= link_to "New House", new_house_path %></li>
+  <li><%= link_to "Add Character (+)", new_person_path %></li>
+  </ul>
+</nav>
+</header>
+
+  <%= yield %>
+</body>
 </html>
